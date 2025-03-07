@@ -1,0 +1,1 @@
+/fake/mounts/remote/sftp/root@152.42.224.218/var/www/pterodactyl/resources/views/blueprint/dashboard/wrappers
